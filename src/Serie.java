@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Serie {
+public class Serie implements Comparable<Serie>{
     private String nome;
     private String genero;
     private Integer tempoEpisodio;
@@ -56,4 +56,15 @@ public class Serie {
     public int hashCode() {
         return Objects.hash(nome, genero, tempoEpisodio);
     }
+
+
+    @Override
+    public int compareTo(Serie serie) {
+        int tempoEpisodio = Integer.compare(this.getTempoEpisodio(), serie.tempoEpisodio);
+        if(tempoEpisodio != 0) return tempoEpisodio;
+        return this.getGenero().compareTo(serie.getGenero());
+    }
+
+
 }
+
