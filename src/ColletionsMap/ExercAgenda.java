@@ -52,20 +52,15 @@ public class ExercAgenda {
 }
 
 class Agenda{
-    //private int id;
-    private String nome;
-    private String contato;
 
-    public Agenda(/*int id, */String nome, String contato) {
-        //this.id = id;
+    private final String nome;
+    private final String contato;
+
+    public Agenda(String nome, String contato) {
         this.nome = nome;
         this.contato = contato;
     }
-/*
-    public int getId() {
-        return id;
-    }
-*/
+
     public String getNome() {
         return nome;
     }
